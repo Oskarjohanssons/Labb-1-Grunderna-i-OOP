@@ -9,18 +9,17 @@
             Circle circle1 = new Circle(5);
             Circle circle2 = new Circle(6);
             Console.WriteLine("Cirkel med 5 i radie");
-            circle1.getArea();
-            circle1.getVolume();
-            circle1.getCircumference();
+            circle1.DisplayArea();
+            circle1.DisplayCircumference();
+            circle1.DisplayVolume();
             Console.WriteLine(" ");
             Console.WriteLine("Cirkel med 6 i radie");
-            circle2.getArea();
-            circle2.getVolume();
-            circle2.getCircumference();
+            circle2.DisplayArea();
+            circle2.DisplayVolume();
+            circle2.DisplayCircumference();
             Console.WriteLine(" ");
-            Console.WriteLine("Arean på en triangel med sidorna 30,30 och 50 blir:");
             Triangle triangle = new Triangle(30, 30, 50);
-            Console.WriteLine(triangle.getArea());
+            triangle.DisplayArea();
         }
     }
 }

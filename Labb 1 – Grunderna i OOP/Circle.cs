@@ -8,30 +8,44 @@ namespace Labb_1___Grunderna_i_OOP
 {
     class Circle
     {
-        float _pi = 3.141f;
-        int _Radius = 5;
+        float Pi = 3.141f;
+        int Radius = 5;
 
         public Circle(int radius)
         {
-            _Radius = radius;
+            Radius = radius;
         }
 
-
-        public void getArea()
+        public void DisplayVolume()
         {
-            float Area = _Radius * _Radius * _pi;
-            Console.WriteLine($"Arean på cirkeln är: {Area}");
-        }
-        public void getCircumference()
-        {
-            float Circumference = 2 * _pi * _Radius;
-            Console.WriteLine($"Omkretsen på cirkeln är: {Circumference}");
+            Console.WriteLine($"Om cirkeln var en boll/svär så hade volymen varit: {GetVolume()} ");
         }
 
-        public void getVolume()
+        public void DisplayArea()
         {
-            double Volume = 4 * _pi * Math.Pow(_Radius, 3.0) / 3;
-            Console.WriteLine($"Om cirkeln var en boll/svär så hade volymen varit: {Volume} " );
+            Console.WriteLine($"Arean på cirkeln är: {GetArea()}");
+        }
+
+        public void DisplayCircumference()
+        {
+            Console.WriteLine($"Omkretsen på cirkeln är: {GetCircumference()}");
+        }
+
+        public float GetArea()
+        {
+            float area = Radius * Radius * Pi;
+            return area;
+        }
+        public float GetCircumference()
+        {
+            float circumference = 2 * Pi * Radius;
+            return circumference;
+        }
+
+        public double GetVolume()
+        {
+            double volume = 4 * Pi * Math.Pow(Radius, 3.0) / 3;
+            return volume;
         }
     }
 }

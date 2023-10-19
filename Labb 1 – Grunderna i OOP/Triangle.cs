@@ -8,21 +8,27 @@ namespace Labb_1___Grunderna_i_OOP
 {
     internal class Triangle
     {
-        double _side1;
-        double _side2;
-        double _side3;
+        double Side1;
+        double Side2;
+        double Side3;
         
         public Triangle(double side1, double side2, double side3)
         {
-            _side1 = side1;
-            _side2 = side2;
-            _side3 = side3;
+            Side1 = side1;
+            Side2 = side2;
+            Side3 = side3;
         }
 
-        public double getArea()
+        public void DisplayArea()
         {
-            double side = (_side1 + _side2 + _side3) / 2.0;
-            return Math.Round(Math.Sqrt(side * (side - _side1) * (side - _side2) * (side - _side3)), 1);
+            Console.WriteLine($"Arean på en triangel med sidorna 30,30 och 50 blir: {GetArea()}");
+        }
+
+
+        public double GetArea()
+        {
+            double side = (Side1 + Side2 + Side3) / 2.0;
+            return Math.Round(Math.Sqrt(side * (side - Side1) * (side - Side2) * (side - Side3)), 1);
 
         }
 
